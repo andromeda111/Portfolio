@@ -18,6 +18,24 @@ h2 {
   margin: 0;
 }
 
+.navbar {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  /*background-color: white;*/
+  /*z-index: 5;*/
+}
+
+.navbar-bg {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  /*background-color: white;*/
+  /*z-index: 4;*/
+  background-color: white;
+
+}
+
 .bg {
   background: #FFF;
   width: 100%;
@@ -44,20 +62,17 @@ h2 {
   left: 0;
   width: 100%;
   z-index: 1;
-  line-height: 60px;
 }
 
-.list {
-  position: fixed;
-  text-align: center;
-}
 ul {
-  position: relative;
+  position: absolute;
   /*top: 0;*/
   white-space: nowrap;
   transition: all 1s ease;
+
   padding: 0px;
   margin: 0;
+
   display: inline-block;
 }
 
@@ -82,7 +97,6 @@ li {
   display: inline;
   list-style: none;
   margin: auto 20px;
-  padding: 16px 0px;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #FFF;
@@ -95,6 +109,22 @@ li {
 }
 /* https://codepen.io/willpaige/pen/zeqHd */
 /* https://codepen.io/mrmlnc/pen/gpKbXM */
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 50px;
+
+}
+
+.nav-menu li {
+  color: black;
+  font-size: 1.1rem;
+  margin: 3px 10px 0px 10px;
+  padding: 0;
+  display: inline;
+  list-style: none;
+}
 
 .header {
   position: relative;

@@ -18,6 +18,24 @@ h2 {
   margin: 0;
 }
 
+.navbar {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  /*background-color: white;*/
+  /*z-index: 5;*/
+}
+
+.navbar-bg {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  /*background-color: white;*/
+  /*z-index: 4;*/
+  background-color: white;
+
+}
+
 .bg {
   background: #FFF;
   width: 100%;
@@ -44,37 +62,16 @@ h2 {
   left: 0;
   width: 100%;
   z-index: 1;
-  line-height: 60px;
-}
-
-.list {
-  position: fixed;
   text-align: center;
 }
+
 ul {
-  position: relative;
-  /*top: 0;*/
-  white-space: nowrap;
-  transition: all 1s ease;
+  height: 40px;
   padding: 0px;
-  margin: 0;
+  padding-top: 15px;
+  margin-top: 25px;
+  /*width: 500px;*/
   display: inline-block;
-}
-
-.toright {
-  left: 100%;
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.tocenter {
-  left: 50%;
--moz-transform: translateX(-50%);
--ms-transform: translateX(-50%);
--webkit-transform: translateX(-50%);
-transform: translateX(-50%);
 }
 
 li {
@@ -82,11 +79,10 @@ li {
   display: inline;
   list-style: none;
   margin: auto 20px;
-  padding: 16px 0px;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #FFF;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 1px #000000;
 }
 
 .li-show {
@@ -95,6 +91,22 @@ li {
 }
 /* https://codepen.io/willpaige/pen/zeqHd */
 /* https://codepen.io/mrmlnc/pen/gpKbXM */
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 50px;
+
+}
+
+.nav-menu li {
+  color: black;
+  font-size: 1.1rem;
+  margin: 3px 10px 0px 10px;
+  padding: 0;
+  display: inline;
+  list-style: none;
+}
 
 .header {
   position: relative;
