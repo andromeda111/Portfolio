@@ -51,6 +51,7 @@ h2 {
   position: fixed;
   text-align: center;
 }
+
 ul {
   position: relative;
   /*top: 0;*/
@@ -78,7 +79,7 @@ transform: translateX(-50%);
 }
 
 li {
-  font-weight:bold;
+  font-weight: bold;
   display: inline;
   list-style: none;
   margin: auto 20px;
@@ -111,6 +112,23 @@ li {
 /*   background-attachment: fixed; */
   background-position: 0;
   isolation: isolate;
+}
+
+.nav-title {
+  transition: all 1s ease;
+  font-weight: bold;
+  display: inline;
+  margin: auto 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #FFF;
+  opacity: 0;
+}
+
+.nav-title-sm {
+  position: absolute;
+  font-size: 0.6rem;
+  margin: 0 0 -5px 10px;
 }
 
 .title {

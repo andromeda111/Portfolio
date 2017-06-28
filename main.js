@@ -18,12 +18,14 @@ $(window).scroll(function() {
  		$('.bg').addClass('show');
 		$('li').addClass('li-show');
 		$('.list').removeClass("tocenter").addClass('toright');
+		$('.nav-title').css({"opacity": "1", "color": "#000"})
 
   } else {
 
     $('.bg').removeClass('show');
 		$('li').removeClass('li-show');
 		$('.list').removeClass("toright").addClass('tocenter');
+		$('.nav-title').css({"opacity": "0", "color": "#FFF"})
 
  	};
 });
