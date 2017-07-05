@@ -1,3 +1,8 @@
+@-moz-viewport {width: device-width;}
+@-ms-viewport {width: device-width;}
+@-o-viewport {width: device-width;}
+@viewport {width: device-width;}
+
 html, body {
   margin: 0px;
   font-family: 'Raleway', sans-serif;
@@ -6,16 +11,28 @@ html, body {
   box-sizing: border-box;
 }
 
+/* Small Media - min-width: 320px */
+
+/* Header Fonts*/
 h1 {
-  font-size: 3rem;
+  font-size: 6rem;
   font-weight: 300;
   margin: 0;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 300;
   margin: 0;
+}
+
+/* Navbar */
+
+.transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .bg {
@@ -27,17 +44,6 @@ h2 {
   position: fixed;
 }
 
-.show {
-  opacity: 0.9;
-}
-
-.transition {
-  -webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-}
-
 .fixed {
   position: fixed;
   top: 0;
@@ -45,6 +51,10 @@ h2 {
   width: 100%;
   z-index: 1;
   line-height: 60px;
+}
+
+.show {
+  opacity: 0.9;
 }
 
 .list {
@@ -60,22 +70,6 @@ ul {
   padding: 0px;
   margin: 0;
   display: inline-block;
-}
-
-.toright {
-  left: 100%;
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.tocenter {
-  left: 50%;
--moz-transform: translateX(-50%);
--ms-transform: translateX(-50%);
--webkit-transform: translateX(-50%);
-transform: translateX(-50%);
 }
 
 li {
@@ -97,21 +91,20 @@ li {
 /* https://codepen.io/willpaige/pen/zeqHd */
 /* https://codepen.io/mrmlnc/pen/gpKbXM */
 
-.header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #111;
-  background-image: url(img/mountain-mist-bg-1080.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-/*   background-attachment: fixed; */
-  background-position: 0;
-  isolation: isolate;
+.toright {
+  left: 100%;
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.tocenter {
+  left: 50%;
+-moz-transform: translateX(-50%);
+-ms-transform: translateX(-50%);
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%);
 }
 
 .nav-title {
@@ -131,24 +124,42 @@ li {
   margin: 0 0 -5px 10px;
 }
 
+/* Header Title Object */
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  background-image: url(img/mountain-mist-bg-1080.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+/*   background-attachment: fixed; */
+  background-position: 0;
+  isolation: isolate;
+}
+
 .title {
   color: white;
   text-align: center;
-  margin-left: 12%;
-  /*margin-top: -50px;*/
+  /*margin-left: 12%;*/
+  margin: auto;
 }
 
 .title-linebreak {
-  width: 200px;
-  margin: 1rem auto;
-  border-bottom: 1px solid white;
+  width: 25rem;
+  margin: 2rem auto;
+  border-bottom: 0.2rem solid white;
 }
 
 .icon {
   display: inline;
   mix-blend-mode: screen;
-  height: 60px;
-  padding: 0 8px;
+  height: 8rem;
+  padding: 0 1rem;
 }
 
 .about {
@@ -160,3 +171,180 @@ li {
   height: 500px;
   background-color: #333;
 }
+
+
+/* MEDIA */
+/*  480px breakpoint  */
+@media only screen and (min-width: 30em) {
+  body {
+    background: orange; } }
+
+/*  768px breakpoint  */
+@media only screen and (min-width: 48em) {
+  body {
+    background: yellow; } }
+
+/*  992px breakpoint  */
+@media only screen and (min-width: 62em) {
+  body {
+    background: red; } }
+
+/*  1200px breakpoint  */
+@media only screen and (min-width: 75em) {
+  /* MAIN CODE */
+
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .bg {
+    background: #FFF;
+    width: 100%;
+    height: 60px;
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+  }
+
+  .show {
+    opacity: 0.9;
+  }
+
+  .transition {
+    -webkit-transition: all 0.5s ease-in-out;
+  	-moz-transition: all 0.5s ease-in-out;
+  	-o-transition: all 0.5s ease-in-out;
+  	transition: all 0.5s ease-in-out;
+  }
+
+  .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    line-height: 60px;
+  }
+
+  .list {
+    position: fixed;
+    text-align: center;
+  }
+
+  ul {
+    position: relative;
+    /*top: 0;*/
+    white-space: nowrap;
+    transition: all 1s ease;
+    padding: 0px;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .toright {
+    left: 100%;
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  .tocenter {
+    left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  }
+
+  li {
+    font-weight: bold;
+    display: inline;
+    list-style: none;
+    margin: auto 20px;
+    padding: 16px 0px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  }
+
+  .li-show {
+    color: #000;
+    text-shadow: none;
+  }
+  /* https://codepen.io/willpaige/pen/zeqHd */
+  /* https://codepen.io/mrmlnc/pen/gpKbXM */
+
+  .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    background-image: url(img/mountain-mist-bg-1080.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  /*   background-attachment: fixed; */
+    background-position: 0;
+    isolation: isolate;
+  }
+
+  .nav-title {
+    transition: all 1s ease;
+    font-weight: bold;
+    display: inline;
+    margin: auto 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #FFF;
+    opacity: 0;
+  }
+
+  .nav-title-sm {
+    position: absolute;
+    font-size: 0.6rem;
+    margin: 0 0 -5px 10px;
+  }
+
+  .title {
+    color: white;
+    text-align: center;
+    /*margin-left: 12%;*/
+    margin: auto;
+  }
+
+  .title-linebreak {
+    width: 200px;
+    margin: 1rem auto;
+    border-bottom: 1px solid white;
+  }
+
+  .icon {
+    display: inline;
+    mix-blend-mode: screen;
+    height: 60px;
+    padding: 0 8px;
+  }
+
+  .about {
+    height: 300px;
+    background-color: #FFF;
+  }
+
+  .content {
+    height: 500px;
+    background-color: #333;
+  } }
