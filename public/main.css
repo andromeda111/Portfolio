@@ -177,8 +177,8 @@ transform: translateX(-50%);
 }
 
 .about {
-  height: 300px;
-  background-color: #FFF;
+  height: 1000px;
+  background: linear-gradient(to bottom right, #000 0%,#2faee5 100%);
 }
 
 .content {
@@ -345,13 +345,13 @@ transform: translateX(-50%);
   }
 
   .about {
-    height: 300px;
-    background-color: #FFF;
+    height: 1000px;
+    background: radial-gradient(at bottom right, #2faee5 0%,#000 100%);
   }
 
   .content {
     height: 500px;
-    background-color: #333;
+    background-color: #FFF;
   } }
 
 /*  992px breakpoint  */

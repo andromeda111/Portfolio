@@ -1,1 +1,1 @@
-Site under construction - July 2017
+Site under construction - August 2017
