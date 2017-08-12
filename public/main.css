@@ -1,3 +1,7 @@
+/* Resources: */
+/* https://codepen.io/willpaige/pen/zeqHd */
+/* https://codepen.io/mrmlnc/pen/gpKbXM */
+
 /*@-moz-viewport {width: device-width;}
 @-ms-viewport {width: device-width;}
 @-o-viewport {width: device-width;}
@@ -38,8 +42,8 @@ h2 {
   margin: 0;
 }
 
-/* Navbar */
-.bg {
+/* Header / Navbar */
+.header-bg {
   background: #FFF;
   width: 100%;
   height: 5rem;
@@ -48,65 +52,66 @@ h2 {
   position: fixed;
 }
 
-.fixed {
+.header-fixed {
   position: fixed;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;*/
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1;
-  line-height: 2rem;
+  line-height: 2.75rem;
 }
 
-.show {
-  opacity: 0.9;
+.header-title {
+  transition: all 1s ease;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #FFF;
+  opacity: 0;
 }
 
-.list {
+.header-title-sm {
+  position: absolute;
+  font-size: 0.3rem;
+  margin: 0 0 -5px 10px;
+}
+
+nav {
   position: inline-block;
   text-align: center;
   border: 1px solid red;
-
 }
 
-ul {
+.nav-list {
   position: relative;
   white-space: nowrap;
   transition: all 1s ease;
   padding: 0px;
-  margin: 0.75rem 0 0 0;
+  margin: 0;
   display: inline-block;
 
 }
 
-li {
+.nav-list-item {
   font-size: 0.75rem;
   font-weight: bold;
   display: inline;
   list-style: none;
   margin: auto 0.75rem;
-  padding: 1rem 0px;
+  padding: 0px;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   color: #FFF;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
-.li-show {
-  color: #000;
-  text-shadow: none;
-}
-/* https://codepen.io/willpaige/pen/zeqHd */
-/* https://codepen.io/mrmlnc/pen/gpKbXM */
-
-/*.to-right {
-  left: 100%;
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-}*/
-
-.to-tab {
+.nav-tab {
   left: 25%;
   -moz-transform: translateY(2rem);
   -ms-transform: translateY(2rem);
@@ -114,33 +119,8 @@ li {
   transform: translateY(2rem);
 }
 
-/*.to-center {
-  left: 50%;
--moz-transform: translateX(-50%);
--ms-transform: translateX(-50%);
--webkit-transform: translateX(-50%);
-transform: translateX(-50%);
-}*/
-
-.nav-title {
-  transition: all 1s ease;
-  font-weight: bold;
-  display: inline-block;
-  margin: 50%;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  color: #FFF;
-  opacity: 0;
-}
-
-.nav-title-sm {
-  position: absolute;
-  font-size: 0.3rem;
-  margin: 0 0 -5px 10px;
-}
-
-/* Header Title Object */
-.header {
+/* Landing Page Content */
+.landing {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -152,18 +132,17 @@ transform: translateX(-50%);
   background-image: url(img/mountain-mist-bg-1080.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-/*   background-attachment: fixed; */
   background-position: 0;
   isolation: isolate;
 }
 
-.title {
+.landing-content {
   color: white;
   text-align: center;
   margin: auto;
 }
 
-.title-linebreak {
+.landing-linebreak {
   width: 10rem;
   margin: 1rem auto;
   border-bottom: 0.08rem solid white;
@@ -176,11 +155,13 @@ transform: translateX(-50%);
   padding: 0 0.5rem;
 }
 
+/* About Me Section */
 .about {
   height: 1000px;
   background: linear-gradient(to bottom right, #000 0%,#2faee5 100%);
 }
 
+/* Other Content Section Placeholder */
 .content {
   height: 500px;
   background-color: #333;
@@ -210,17 +191,13 @@ transform: translateX(-50%);
     margin: 0;
   }
 
-  .bg {
+  .header-bg {
     background: #FFF;
     width: 100%;
     height: 60px;
     opacity: 0;
     z-index: -1;
     position: fixed;
-  }
-
-  .show {
-    opacity: 0.9;
   }
 
   .transition {
@@ -230,31 +207,38 @@ transform: translateX(-50%);
   	transition: all 0.5s ease-in-out;
   }
 
-  .fixed {
+  .header-fixed {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
-    line-height: 60px;
+    line-height: 3.75rem;
   }
 
-  .list {
+  .header-title {
+    transition: all 1s ease;
+    font-weight: bold;
+    display: inline;
+    margin: auto 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #FFF;
+    opacity: 0;
+  }
+
+  .header-title-sm {
+    position: absolute;
+    font-size: 0.6rem;
+    margin: 0 0 -5px 10px;
+  }
+
+  nav {
     position: fixed;
     text-align: center;
   }
 
-  ul {
-    position: relative;
-    /*top: 0;*/
-    white-space: nowrap;
-    transition: all 1s ease;
-    padding: 0px;
-    margin: 0;
-    display: inline-block;
-  }
-
-  .to-right {
+  .nav-to-right {
     left: 100%;
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
@@ -262,35 +246,38 @@ transform: translateX(-50%);
     transform: translateX(-100%);
   }
 
-  .to-center {
+  .nav-center {
     left: 50%;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
-  li {
+  .nav-list {
+    position: relative;
+    white-space: nowrap;
+    transition: all 1s ease;
+    padding: 0px;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .nav-list-item {
     font-size: 1rem;
     font-weight: bold;
     display: inline;
     list-style: none;
     margin: auto 20px;
-    padding: 16px 0px;
+    padding: 0px;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #FFF;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   }
 
-  .li-show {
-    color: #000;
-    text-shadow: none;
-  }
-  /* https://codepen.io/willpaige/pen/zeqHd */
-  /* https://codepen.io/mrmlnc/pen/gpKbXM */
-
-  .header {
+  /* Landing Page Contents */
+  .landing {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -302,36 +289,17 @@ transform: translateX(-50%);
     background-image: url(img/mountain-mist-bg-1080.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-  /*   background-attachment: fixed; */
     background-position: 0;
     isolation: isolate;
   }
 
-  .nav-title {
-    transition: all 1s ease;
-    font-weight: bold;
-    display: inline;
-    margin: auto 20px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #FFF;
-    opacity: 0;
-  }
-
-  .nav-title-sm {
-    position: absolute;
-    font-size: 0.6rem;
-    margin: 0 0 -5px 10px;
-  }
-
-  .title {
+  .landing-content {
     color: white;
     text-align: center;
-    /*margin-left: 12%;*/
     margin: auto;
   }
 
-  .title-linebreak {
+  .landing-linebreak {
     width: 200px;
     margin: 1rem auto;
     border-bottom: 1px solid white;
@@ -344,11 +312,14 @@ transform: translateX(-50%);
     padding: 0 8px;
   }
 
+
+/* About Me Section*/
   .about {
     height: 1000px;
     background: radial-gradient(at bottom right, #2faee5 0%,#000 100%);
   }
 
+/* Other Content Section Placeholder */
   .content {
     height: 500px;
     background-color: #FFF;
