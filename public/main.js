@@ -1,45 +1,37 @@
-// $(document).ready(function() {
-//   $(window).scroll(function() {
-//       $(this).scrollTop() > 300 ? $(".navbar").addClass("smaller") : $(".navbar").removeClass("smaller")
-//   })
-// })
-
-// $(document).ready(function() {
-//   $(window).scroll(function() {
-//       $(this).scrollTop() > 300 ? $(".navbar-bg").fadeIn(100) : $(".navbar-bg").fadeOut(100)
-//   })
-// })
 
 $(window).scroll(function() {
-// 100 = The point you would like to fade the nav in.
-
+	// Scroll greater than 200
 	if ($(window).scrollTop() > 200 ){
 		if (window.matchMedia('(max-width: 767px)').matches) {
-			console.log($(window).width());
-			$('.header-bg').css({"opacity": "0.9"});
+			console.log('TAB ', $(window).width());
+			$('.header-fixed').css({'background': 'rgba(255, 255, 255, 0.9)'});
 			$('.nav-list-item').css({'color': '#000', 'text-shadow': 'none'});
-			$('nav').removeClass("nav-center").addClass('nav-tab');
-			$('.header-title').css({"opacity": "1", "color": "#000"})
+			$('nav').removeClass("nav-center")
+			$('.header-title-container').css({"opacity": "0", "color": "#FFF"})
 		} else {
-			console.log('screen width above 700');
-			$('.header-bg').css({"opacity": "0.9"});
+			console.log('FULL - screen width above 700');
+			$('.header-fixed').css({'background': 'rgba(255, 255, 255, 0.9)'});
 			$('.nav-list-item').css({'color': '#000', 'text-shadow': 'none'});
 			$('nav').removeClass("nav-center").addClass('nav-to-right');
-			$('.header-title').css({"opacity": "1", "color": "#000"})
+			$('.header-title-container').css({"opacity": "1", "color": "#000"})
 		}
 
   } else {
-
+		// Scroll less than 200
 		if (window.matchMedia('(max-width: 767px)').matches) {
-			$('.header-bg').css({"opacity": "0"});
+			console.log('TAB ', $(window).width());
+			$('.header-fixed').css({'background': 'rgba(255, 255, 255, 0.0)'});
 			$('.nav-list-item').css({'color': '#FFF', 'text-shadow': '1px 1px 1px rgba(0, 0, 0, 0.8)'});
-			$('nav').removeClass("nav-tab").addClass('nav-center');
-			$('.header-title').css({"opacity": "0", "color": "#FFF"})
+			$('nav').addClass('nav-center');
+			$('.header-title-container').css({"opacity": "0", "color": "#000"})
+
 		} else {
-			$('.header-bg').css({"opacity": "0"});
+			console.log('screen width above 700');
+			$('.header-fixed').css({'background': 'rgba(255, 255, 255, 0.0)'});
 			$('.nav-list-item').css({'color': '#FFF', 'text-shadow': '1px 1px 1px rgba(0, 0, 0, 0.8)'});
 			$('nav').removeClass('nav-to-right').addClass('nav-center');
-			$('.header-title').css({"opacity": "0", "color": "#FFF"})
+			$('.header-title-container').css({"opacity": "0", "color": "#FFF"})
+
 		}
 
  	};
