@@ -15,6 +15,20 @@ html, body {
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+.active {
+  color: #fff !important;
+  background-image: linear-gradient(to bottom, #999, #666);
+}
+
+#jsicon {
+  max-height: 3rem;
+}
+
 /***********************************/
 /* General Transitions
 /***********************************/
@@ -43,7 +57,7 @@ h2 {
 }
 
 /* Header / Navbar */
-.header-fixed {
+.nav-fixed {
   position: fixed;
   background:rgba(255, 255, 255, 0.0);
   display: flex;
@@ -54,19 +68,19 @@ h2 {
   z-index: 1;
 }
 
-.header-title-container {
+.nav-title-container {
   max-width: 767px;
   opacity: 0;
   display: none;
 }
 
-.header-title {
+.nav-title {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 
-.header-title-sm {
+.nav-title-sm {
   font-size: 0.8rem;
   align-self: center;
 }
@@ -75,6 +89,9 @@ h2 {
   white-space: nowrap;
   padding: 0;
   margin: 0;
+  height: 3rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-list-item {
@@ -82,16 +99,18 @@ h2 {
   font-weight: bold;
   display: inline;
   list-style: none;
-  margin: auto 0.75rem;
-  padding: 0px;
+  line-height: 3rem;
+  margin: auto 0.5rem;
+  padding: 0 4px 0 8px;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   color: #FFF;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  border-bottom: inside 2px solid blue;
 }
 
-/* Landing Page Content */
-.landing {
+/* Header Content */
+.header {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -100,20 +119,21 @@ h2 {
   width: 100%;
   height: 100vh;
   background-color: #111;
-  background-image: url(img/mountain-mist-bg-1080.jpg);
+  background-image: url(img/seattle-skyline-blur3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0;
+  background-position: right;
   isolation: isolate;
+  background-attachment: fixed;
 }
 
-.landing-content {
+.header-content {
   color: white;
   text-align: center;
   margin: auto;
 }
 
-.landing-linebreak {
+.header-linebreak {
   width: 10rem;
   margin: 1rem auto;
   border-bottom: 0.08rem solid white;
@@ -133,11 +153,28 @@ h2 {
 }
 
 /* Other Content Section Placeholder */
-.content {
-  height: 500px;
-  background-color: #333;
+.projects {
+  position: relative;
+  height: 1000px;
+  background-color: #111;
+  background-image: url('img/sea-bg2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  isolation: isolate;
+  background-attachment: fixed;
 }
 
+.contact {
+  height: 600px;
+  background-color: #888;
+  background-position: center;
+}
+
+footer {
+  height: 4rem;
+  background-color: #333;
+}
 
 /* MEDIA */
 /*  480px breakpoint  */
@@ -163,11 +200,11 @@ h2 {
   }
 
 /* Header / Navbar */
-  .header-fixed {
+  .nav-fixed {
     justify-content: space-between;
   }
 
-  .header-title-container {
+  .nav-title-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -175,7 +212,7 @@ h2 {
     margin: auto 20px;
   }
 
-  nav {
+  .nav-main {
     position: fixed;
   }
 
@@ -201,8 +238,8 @@ h2 {
     letter-spacing: 4px;
   }
 
-  /* Landing Page Contents */
-  .landing {
+  /* Header Contents */
+  .header {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -211,20 +248,21 @@ h2 {
     width: 100%;
     height: 100vh;
     background-color: #111;
-    background-image: url(img/mountain-mist-bg-1080.jpg);
+    background-image: url(img/seattle-skyline-blur3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0;
+    background-position:0;
     isolation: isolate;
+    background-attachment: fixed;
   }
 
-  .landing-content {
+  .header-content {
     color: white;
     text-align: center;
     margin: auto;
   }
 
-  .landing-linebreak {
+  .header-linebreak {
     width: 200px;
     margin: 1rem auto;
     border-bottom: 1px solid white;

@@ -2,53 +2,62 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>John Seymour | Full-Stack Web Developer</title>
-    <!-- CSS, Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script defer type="text/javascript" src="main.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>John Seymour | Full-Stack Web Developer</title>
+  <!-- CSS, Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script defer type="text/javascript" src="main.js"></script>
 </head>
 
 <body>
 
-    <header class="header-fixed transition">
+  <nav class="nav-fixed transition">
+    <div class="nav-main nav-center transition">
+      <ul class="nav-list">
+        <li class="nav-list-item transition"><a href="#about">About</a></li>
+        <li class="nav-list-item transition"><a href="#projects">Projects</a></li>
+        <li class="nav-list-item transition"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-title-container transition">
+      <div class="nav-title"><a href="#top">John Seymour</a></div>
+      <div class="nav-title-sm">Full-Stack Web Developer</div>
+    </div>
+  </nav>
 
-      <nav class="nav-center transition">
-        <ul class="nav-list">
-          <li class="nav-list-item transition">About</li>
-          <li class="nav-list-item transition">Projects</li>
-          <li class="nav-list-item transition">Contact</li>
-        </ul>
-      </nav>
-      <div class="header-title-container transition">
-        <div class="header-title">John Seymour</div>
-        <div class="header-title-sm">Full-Stack Web Developer</div>
-      </div>
-      
-    </header>
 
-    <section class="landing">
-      <div class="landing-content">
-        <h1 class="transition">John Seymour</h1>
-        <h2 class="transition">Full-Stack Web Developer</h2>
-        <div class="landing-linebreak"></div>
-        <img class="icon transition" src="img/html5-icon.png" alt="">
-        <img class="icon transition" src="img/css3-icon.png" alt="">
-        <img class="icon transition" src="img/javascript-icon.png" alt="">
-        <img class="icon transition" src="img/angularjs-icon.png" alt="">
-        <img class="icon transition" src="img/node-icon.png" alt="">
-      </div>
+  <header id="top" class="header">
+    <div class="header-content">
+      <h1 class="transition">John Seymour</h1>
+      <h2 class="transition">Full-Stack Web Developer</h2>
+      <div class="header-linebreak"></div>
+      <img class="icon transition" src="img/html5-icon.png" alt="">
+      <img class="icon transition" src="img/css3-icon.png" alt="">
+      <img class="icon transition" src="img/javascript-icon.png" alt="">
+      <img class="icon transition" src="img/angularjs-icon.png" alt="">
+      <img class="icon transition" src="img/node-icon.png" alt="">
+    </div>
+  </header>
+
+
+
+    <section id="about" class="about">
+      About
     </section>
 
-    <section class="about">
-    About
+    <section id="projects" class="projects">
+      Placeholder Space
     </section>
-    <section class="content">
-    Placeholder Space
+
+    <section id="contact" class="contact">
+      Placeholder Space
     </section>
+
+  <footer>Footer</footer>
+
 </body>
 
 </html>
