@@ -7,6 +7,10 @@
 @-o-viewport {width: device-width;}
 @viewport {width: device-width;}*/
 
+/***********************************/
+/* General
+/***********************************/
+
 html, body {
   margin: 0px;
   font-family: 'Raleway', sans-serif;
@@ -22,16 +26,13 @@ a {
 
 .active {
   color: #fff !important;
-  background-image: linear-gradient(to bottom, #999, #666);
+  background-image: linear-gradient(to top, #AAA, #666);
 }
 
 #jsicon {
   max-height: 3rem;
 }
 
-/***********************************/
-/* General Transitions
-/***********************************/
 .transition {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -44,6 +45,7 @@ a {
 /***********************************/
 
 /* Header Fonts */
+/****************/
 h1 {
   font-size: 2.25rem;
   font-weight: 300;
@@ -56,7 +58,9 @@ h2 {
   margin: 0;
 }
 
-/* Header / Navbar */
+
+/* Navigation */
+/**************/
 .nav-fixed {
   position: fixed;
   background:rgba(255, 255, 255, 0.0);
@@ -109,7 +113,9 @@ h2 {
   border-bottom: inside 2px solid blue;
 }
 
-/* Header Content */
+
+/* Header Section */
+/******************/
 .header {
   position: relative;
   display: flex;
@@ -118,23 +124,23 @@ h2 {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #111;
+  background-color: #4A7BB5;
   background-image: url(img/seattle-skyline-blur3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 85%;
   isolation: isolate;
   background-attachment: fixed;
 }
 
 .header-content {
-  color: white;
+  color: #fff;
   text-align: center;
   margin: auto;
 }
 
 .header-linebreak {
-  width: 10rem;
+  width: 14rem;
   margin: 1rem auto;
   border-bottom: 0.08rem solid white;
 }
@@ -142,17 +148,37 @@ h2 {
 .icon {
   display: inline;
   mix-blend-mode: screen;
-  height: 2.5rem;
+  height: 2rem;
   padding: 0 0.5rem;
 }
 
-/* About Me Section */
+
+/* About Section */
+/*****************/
 .about {
-  height: 1000px;
-  background: linear-gradient(to bottom right, #000 0%,#2faee5 100%);
+  height: 800px;
+  background-image: linear-gradient(to top, rgba(54,105,158,0.6) 0%,rgba(20,50,81,0.6) 100%), url("img/black-bg.jpg");
+  /*background-image: linear-gradient(to bottom, rgba(54,105,158,0.7) 0%,rgba(200,225,255,0.7) 100%), url("img/black-bg.jpg");*/
 }
 
-/* Other Content Section Placeholder */
+.txt {
+  font-size: 1rem;
+  color: black;
+  position: relative;
+  margin: 100px auto;
+  padding: 0 25px;
+}
+.txt2 {
+  font-size: 1rem;
+  color: white;
+  position: relative;
+  margin: 100px auto;
+  padding: 0 25px;
+}
+
+
+/* Projects Section */
+/********************/
 .projects {
   position: relative;
   height: 1000px;
@@ -165,11 +191,17 @@ h2 {
   background-attachment: fixed;
 }
 
+
+/* Contact Section */
+/*******************/
 .contact {
   height: 600px;
   background-color: #888;
   background-position: center;
 }
+
+/* Contact Section */
+/********************/
 
 footer {
   height: 4rem;
@@ -199,7 +231,8 @@ footer {
     margin: 0;
   }
 
-/* Header / Navbar */
+/* Navigation */
+/**************/
   .nav-fixed {
     justify-content: space-between;
   }
@@ -234,59 +267,51 @@ footer {
 
   .nav-list-item {
     font-size: 1rem;
-    margin: auto 20px;
-    letter-spacing: 4px;
+    margin: auto 1.25rem;
+    letter-spacing: 0.25rem;
   }
 
-  /* Header Contents */
+  /* Header Section */
+  /******************/
   .header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #111;
-    background-image: url(img/seattle-skyline-blur3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:0;
-    isolation: isolate;
-    background-attachment: fixed;
+
   }
 
   .header-content {
-    color: white;
-    text-align: center;
-    margin: auto;
+
   }
 
   .header-linebreak {
-    width: 200px;
-    margin: 1rem auto;
-    border-bottom: 1px solid white;
+    width: 18rem;
+    border-bottom: 0.08rem solid white;
   }
 
   .icon {
-    display: inline;
-    mix-blend-mode: screen;
-    height: 60px;
-    padding: 0 8px;
+    height: 3rem;
   }
 
 
-/* About Me Section*/
+  /* About Section */
+  /*****************/
   .about {
-    height: 1000px;
-    background: radial-gradient(at bottom right, #2faee5 0%,#000 100%);
+
   }
 
-/* Other Content Section Placeholder */
+
+  /* Projects Section */
+  /********************/
   .content {
     height: 500px;
     background-color: #FFF;
-  } }
+  }
+
+
+  /* Contact Section */
+  /********************/
+
+
+
+}
 
 /*  992px breakpoint  */
 @media only screen and (min-width: 62em) {
