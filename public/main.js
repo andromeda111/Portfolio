@@ -67,13 +67,13 @@ $(window).scroll(function() {
 	if ($(window).scrollTop() > 200 ){
 		if (window.matchMedia('(max-width: 767px)').matches) {
 			console.log('TAB ', $(window).width());
-			$('.nav-fixed').css({'background': 'rgba(255, 255, 255, 0.7)'});
+			$('.nav-fixed').css({'background': 'rgba(255, 255, 255, 0.8)'});
 			$('.nav-list-item').css({'color': '#000', 'text-shadow': 'none'});
 			$('.nav-main').removeClass("nav-center")
 			$('.nav-title-container').css({"opacity": "0", "color": "#FFF"})
 		} else {
 			console.log('FULL - screen width above 700');
-			$('.nav-fixed').css({'background': 'rgba(255, 255, 255, 0.7)'});
+			$('.nav-fixed').css({'background': 'rgba(255, 255, 255, 0.8)'});
 			$('.nav-list-item').css({'color': '#000', 'text-shadow': 'none'});
 			$('.nav-main').removeClass("nav-center").addClass('nav-to-right');
 			$('.nav-title-container').css({"opacity": "1", "color": "#000"})
