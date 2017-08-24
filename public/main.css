@@ -247,6 +247,7 @@ padding: 2rem 2rem;
   margin-top: 0.5rem;
   font-style: italic;
 }
+
 /* Projects Section */
 /********************/
 .projects {
@@ -261,15 +262,15 @@ padding: 2rem 2rem;
   isolation: isolate;
   background-attachment: fixed;
   /*filter: blur(1px);*/
-
 }
 
 .projects-header {
-color: #000;
-padding: 2rem 2rem;
+  color: #000;
+  padding: 2rem 2rem;
 }
 
 .projects-header p {
+  font-size: 1.1rem;
   text-align: center;
   margin-top: 2rem;
 }
@@ -289,45 +290,94 @@ padding: 2rem 2rem;
   margin: 0 2% 1rem;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   background: #fff;
   box-shadow: 1px 2px 3px #888;
 }
 
 .projects-card-thumb {
-  overflow: hidden;
-  /*flex: 1 1 auto;*/
-  /*width: 100px;*/
-  /*height: 100px;*/
+  margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+	cursor: pointer;
+	overflow: hidden;
 }
 
-.projects-card-thumb img {
+.project-img {
   align-self: center;
   max-width: 100%;
   height: auto;
   display: block;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+.projects-card-thumb:hover figcaption {
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	filter: alpha(opacity=100);
+	opacity: 1;
+	top: 0;
+}
+
+figcaption {
+  font-size: 1.2rem;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background: rgba(0,0,0,.6);
+  color: #fff;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	filter: alpha(opacity=0);
+	opacity: 0;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	-o-transition: all .6s ease;
+	-ms-transition: all .6s ease;
+	transition: all .6s ease;
+}
+
+.projects-card-thumb:hover .project-img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+  filter: blur(2px);
+}
+
+.project-thumb-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.project-thumb-divider {
+  position:absolute;
+  left:50%;
+  top:10%;
+  bottom:10%;
+  border-left:1px solid white;
+}
+
+figcaption a:hover {
+	font-size: 1.4rem;
+}
+
+figcaption img:hover {
+  transform: scale(1.15, 1.15);
 }
 
 .projects-card-details {
   flex-grow: 1;
   padding: 0.5rem 1rem;
-  /*font-size: 0.75rem;*/
-  /*border: 1px solid black;*/
   overflow: hidden;
-  /*flex: 1 1 auto;*/
-  /*width: 100px;*/
-  /*height: 100px;*/
-  /*border-bottom: 2px solid lightgray;*/
 }
-
-.projects-card-links {
-min-height: 5rem;
-}
-
-
-
-
-
 
 /* Contact Section */
 /*******************/

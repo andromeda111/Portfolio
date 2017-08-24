@@ -18,8 +18,7 @@ $(document).ready(function() {
     $('.nav-list li a').parent().removeClass('active');
 
     $(this).parent().addClass('active');
-  });
-
+  })
 
   $(window).scroll(function () {
 
