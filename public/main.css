@@ -191,7 +191,7 @@ h5 {
   padding-bottom: 2rem;
 }
 
-.about-header {
+.light-header {
 color: #fff;
 padding: 2rem 2rem;
 }
@@ -308,11 +308,11 @@ padding: 2rem 2rem;
   max-width: 100%;
   height: auto;
   display: block;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -o-transition: all .3s;
-  -ms-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .projects-card-thumb:hover figcaption {
@@ -333,11 +333,11 @@ figcaption {
 	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 	filter: alpha(opacity=0);
 	opacity: 0;
-	-webkit-transition: all .6s ease;
-	-moz-transition: all .6s ease;
-	-o-transition: all .6s ease;
-	-ms-transition: all .6s ease;
-	transition: all .6s ease;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	-ms-transition: all 0.6s ease;
+	transition: all 0.6s ease;
 }
 
 .projects-card-thumb:hover .project-img {
@@ -346,6 +346,7 @@ figcaption {
 	-o-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
+  -webkit-filter: blur(2px);
   filter: blur(2px);
 }
 
@@ -382,24 +383,62 @@ figcaption img:hover {
 /* Contact Section */
 /*******************/
 .contact {
-  height: 600px;
-  background-color: #888;
-  background-position: center;
+  padding: 0 2%;
+  min-height: calc(100vh - 98px);
+  padding-bottom: 3rem;
+  background-color: #333;
+  background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.8) 0%,rgba(25,25,25,0.8) 100%), url('img/sea-bg1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  /*isolation: isolate;*/
+  background-attachment: fixed;
 }
 
-/* Contact Section */
+.contact-container {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.contact-icons-group {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.contact-icon {
+  margin: 0 1rem;
+}
+
+.contact-icon img {
+  filter: invert();
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Footer Section */
 /********************/
 
 footer {
-  height: 4rem;
-  background-color: #333;
+  font-size: 0.8rem;
+  color: #fff;
+  height: 3rem;
+  width: 100%;
+  margin-top: -3rem;
+  text-align: center;
 }
 
 /* MEDIA */
 /*  480px breakpoint - Mobile Landscape */
 @media only screen and (min-width: 30em) {
 
-  .about-header {
+  .light-header {
   padding: 2rem 4rem;
   }
 
@@ -434,6 +473,14 @@ footer {
     margin: 0 2% 1rem;
     flex: 1 1 40%;
     max-width: 48%;
+  }
+
+  .contact-icons-group {
+    margin: 0;
+  }
+
+  .contact-icon {
+  margin: 0 2rem;
   }
 }
 
@@ -567,7 +614,24 @@ footer {
   /* Contact Section */
   /********************/
 
+  .contact-icons-group {
+    margin: 4rem 0;
+    max-width: 50%;
+  }
 
+  .contact-icon {
+  margin: 0 4rem;
+  }
+
+  .contact-icon img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .contact-icon img:hover {
+    transition: 0.2s ease;
+    transform: scale(1.2, 1.2);
+  }
 
 }
 
