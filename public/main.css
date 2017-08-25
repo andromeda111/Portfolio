@@ -414,11 +414,6 @@ figcaption img:hover {
 }
 
 .contact-icon img {
-  -webkit-filter: invert();
-  -moz-filter: invert();
-  -o-filter: invert();
-  -ms-filter: invert();
-  filter: invert();
   width: 3rem;
   height: 3rem;
 }
