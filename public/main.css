@@ -261,7 +261,6 @@ padding: 2rem 2rem;
   background-position: top center;
   isolation: isolate;
   background-attachment: fixed;
-  /*filter: blur(1px);*/
 }
 
 .projects-header {
@@ -333,11 +332,9 @@ figcaption {
 	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 	filter: alpha(opacity=0);
 	opacity: 0;
-	-webkit-transition: all 0.6s ease;
-	-moz-transition: all 0.6s ease;
-	-o-transition: all 0.6s ease;
-	-ms-transition: all 0.6s ease;
-	transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
 .projects-card-thumb:hover .project-img {
@@ -371,6 +368,8 @@ figcaption a:hover {
 }
 
 figcaption img:hover {
+  -webkit-transform: scale(1.15, 1.15);
+  -ms-transform: scale(1.15, 1.15);
   transform: scale(1.15, 1.15);
 }
 
@@ -417,6 +416,10 @@ figcaption img:hover {
 }
 
 .contact-icon img {
+  -webkit-filter: invert();
+  -moz-filter: invert();
+  -o-filter: invert();
+  -ms-filter: invert();
   filter: invert();
   width: 3rem;
   height: 3rem;
