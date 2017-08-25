@@ -327,7 +327,7 @@ figcaption {
   height: 100%;
   width: 100%;
   display: flex;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.75);
   color: #fff;
 	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 	filter: alpha(opacity=0);
@@ -343,8 +343,6 @@ figcaption {
 	-o-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
 }
 
 .project-thumb-caption {
@@ -423,6 +421,15 @@ figcaption img:hover {
   filter: invert();
   width: 3rem;
   height: 3rem;
+}
+
+.contact-icon img:hover {
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
 }
 
 /* Footer Section */
@@ -604,14 +611,18 @@ footer {
 
   /* Projects Section */
   /********************/
-  .content {
-    height: 500px;
-    background-color: #FFF;
-  }
-
   .projects-card {
     margin: 0 1% 1rem;
     flex: 1 1 30%;
+  }
+
+  .projects-card-thumb:hover .project-img {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+
+  figcaption {
+    background: rgba(0,0,0,.6);
   }
 
   /* Contact Section */
@@ -629,11 +640,6 @@ footer {
   .contact-icon img {
     width: 5rem;
     height: 5rem;
-  }
-
-  .contact-icon img:hover {
-    transition: 0.2s ease;
-    transform: scale(1.2, 1.2);
   }
 
 }
