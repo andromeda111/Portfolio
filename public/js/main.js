@@ -43,7 +43,7 @@ $(window).scroll(function() {
   // Scroll greater than 200
   if ($(window).scrollTop() > 200) {
     if (window.matchMedia('(max-width: 767px)').matches) {
-      console.log('TAB ', $(window).width());
+
       $('.nav-fixed').css({
         'background': 'rgba(255, 255, 255, 0.8)'
       });
@@ -57,7 +57,7 @@ $(window).scroll(function() {
         "color": "#FFF"
       })
     } else {
-      console.log('FULL - screen width above 700');
+
       $('.nav-fixed').css({
         'background': 'rgba(255, 255, 255, 0.8)'
       });
@@ -78,7 +78,7 @@ $(window).scroll(function() {
   } else {
     // Scroll less than 200
     if (window.matchMedia('(max-width: 767px)').matches) {
-      console.log('TAB ', $(window).width());
+
       $('.nav-fixed').css({
         'background': 'rgba(255, 255, 255, 0.0)'
       });
@@ -93,7 +93,7 @@ $(window).scroll(function() {
       })
 
     } else {
-      console.log('screen width above 700');
+
       $('.nav-fixed').css({
         'background': 'rgba(255, 255, 255, 0.0)'
       });
