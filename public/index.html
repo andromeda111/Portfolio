@@ -5,15 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>John Seymour | Full-Stack Web Developer</title>
+  <meta name="description" content="John Seymour, Full-Stack Web Developer, Seattle, WA. JavaScript, AngularJS, HTML5, CSS3. Portfolio site.">
+  <meta property="og:title" content="John Seymour | Full-Stack Web Developer" />
+  <meta property="og:site_name" content="John Seymour | Full-Stack Web Developer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.johnseymourdev.com" />
+  <meta property="og:description" content="John Seymour, Full-Stack Web Developer, Seattle, WA. JavaScript, AngularJS, HTML5, CSS3. Portfolio site." />
+  <meta property="og:image" content="https://www.johnseymourdev.com/img/portfolio-thumbnail.jpg" />
+  <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
   <!-- CSS, Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="stylesheets/main.css">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script defer type="text/javascript" src="main.js"></script>
+  <script defer type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
-
+  <!-- Navigation -->
   <nav class="nav-fixed transition">
     <div class="nav-main nav-center transition">
       <ul class="nav-list">
@@ -28,166 +36,180 @@
     </div>
   </nav>
 
-
+  <!-- Header / Landing Page -->
   <header id="top" class="header">
     <div class="header-content">
       <h1 class="transition">John Seymour</h1>
       <h3 class="transition">Full-Stack Web Developer</h3>
       <div class="header-linebreak"></div>
-      <img class="icon transition" src="img/html5-icon.png" alt="">
-      <img class="icon transition" src="img/css3-icon.png" alt="">
-      <img class="icon transition" src="img/javascript-icon.png" alt="">
-      <img class="icon transition" src="img/angularjs-icon.png" alt="">
-      <img class="icon transition" src="img/node-icon.png" alt="">
+      <img class="icon transition" src="img/html5-icon.png" alt="HTML5">
+      <img class="icon transition" src="img/css3-icon.png" alt="CSS3">
+      <img class="icon transition" src="img/javascript-icon.png" alt="JavaScript">
+      <img class="icon transition" src="img/angularjs-icon.png" alt="AngularJS">
+      <img class="icon transition" src="img/node-icon.png" alt="Node.js">
     </div>
+    <div class="arrow-button">
+      <div class="outer-circle"></div>
+      <div class="inner-circle"></div>
+      <div class="down-arrow">
+        <a href="#about"><img src="img/arrowdown.png" alt="Down arrow linking to About section"></a>
+      </div>
   </header>
 
-
-
-    <section id="about" class="about">
-      <header class="light-header">
-        <h2>About Me</h2>
-      </header>
-      <div class="about-intro">
-        <img class="about-portrait" src="img/portrait-img-icon1.png" alt="">
-        <div class="about-description">
-          <p> Beard cliche flexitarian, subway tile man. Adaptogen shoreditch poke sartorial.</p>
-          <p>Tilde quinoa, single-origin coffee kombucha snackwave edison bulb, put a bird on it leggings af narwhal cloud bread.</p>
-          <a class="button-clear" type="button" name="button">Download Resume</a>
+  <!-- About Me -->
+  <section id="about" class="about">
+    <header class="light-header">
+      <h2>About Me</h2>
+    </header>
+    <div class="about-intro">
+      <img class="about-portrait" src="img/portrait-img-icon1.png" alt="John Seymour">
+      <div class="about-description">
+        <p> Hi, I'm John! I am a 20-something full-stack web developer based in Seattle, WA.</p>
+        <p>Along with my passion for technology comes a passion to create. Web development has become an endeavor through which I can bring those passions to fruition.</p>
+        <p>On the personal front, I love coffee, rock climbing, music, games, and learning new things. I believe in working hard each day toward leaving this place a little better than we found it.</p>
+        <p>I am currently looking for a junior-level developer position!</p>
+        <div class="resume">
+          <a class="button-clear" href="resources/John-Seymour-Resume-2017">Resumé PDF</a>
         </div>
       </div>
-      <div class="skills">
-          <h4>Skills and Proficiences</h4>
-          <ul>
-            <li>HTML5</li>
-          </ul>
-          <ul>
-            <li>CSS3</li>
-            <li>SCSS / SASS</li>
-            <li>Bootstrap</li>
-          </ul>
-          <ul>
-            <li>JavaScript</li>
-            <li>jQuery</li>
-            <li>AngularJS</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>Ionic 1</li>
-            <li>Mocha</li>
-            <li>Chai</li>
-            <li class="skills-growing">Growing in: React</li>
-          </ul>
-          <ul>
-            <li>Databases</li>
-            <li>PostgreSQL</li>
-            <li class="skills-growing">Growing in: MongoDB</li>
-          </ul>
-          <ul>
-            <li>Concepts & Methods</li>
-            <li>RESTful API</li>
-            <li>Pair Programming</li>
-            <li>Test-Driven</li>
-            <li>Git / Version Control</li>
-            <li>OOP</li>
-            <li>MVC</li>
-          </ul>
-          <ul>
-            <li>Web Design & Tools</li>
-            <li>Responsive Design</li>
-            <li>Mobile-First Design</li>
-            <li>Adobe Photoshop</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    </div>
+    <div class="skills">
+      <h4>Skills and Proficiences</h4>
+      <ul>
+        <li>HTML5</li>
+      </ul>
+      <ul>
+        <li>CSS3</li>
+        <li>SCSS / SASS</li>
+        <li>Bootstrap</li>
+      </ul>
+      <ul>
+        <li>JavaScript</li>
+        <li>AngularJS</li>
+        <li>jQuery</li>
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>Ionic 1</li>
+        <li>Mocha</li>
+        <li>Chai</li>
+        <li class="skills-growing">Growing in: React</li>
+      </ul>
+      <ul>
+        <li>Databases</li>
+        <li>PostgreSQL</li>
+        <li class="skills-growing">Growing in: MongoDB</li>
+      </ul>
+      <ul>
+        <li>Concepts & Methods</li>
+        <li>RESTful API</li>
+        <li>Pair Programming</li>
+        <li>Test-Driven</li>
+        <li>Git / Version Control</li>
+        <li>OOP</li>
+        <li>MVC</li>
+      </ul>
+      <ul>
+        <li>Web Design & Tools</li>
+        <li>Responsive Design</li>
+        <li>Mobile-First Design</li>
+        <li>Adobe Photoshop</li>
+      </ul>
+    </div>
+    </div>
+  </section>
 
-    <section id="projects" class="projects">
-      <header class="projects-header">
-        <h2>Projects</h2>
-        <p>Check out some of the web applications that I have developed.</p>
-      </header>
-      <div class="projects-container">
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <header class="projects-header">
+      <h2>Projects</h2>
+      <p>Check out some of the recent web applications that I have developed.</p>
+    </header>
+    <div class="projects-container">
 
-        <!-- HousePal -->
-        <div class="projects-card">
-          <figure class="projects-card-thumb">
-            <img class="project-img" src="img/housepal-thumb.jpg" alt="">
-            <figcaption>
-              <div class="project-thumb-caption">
-                <a href="https://github.com/andromeda111/housepal" target="_blank"><img src="img/github.png" alt=""></a>
-              </div>
-            </figcaption>
-          </figure>
-          <div class="projects-card-details">
-            <h5><a href="https://github.com/andromeda111/housepal" target="_blank">HousePal</a></h5>
-            <p>Android app designed to make communal living easier for people with roommates.</p>
-          </div>
-        </div>
-        <!-- NocJournal -->
-        <div class="projects-card">
-            <figure class="projects-card-thumb">
-              <img class="project-img" src="img/nocjournal-thumb.jpg" alt="">
-              <figcaption>
-                <div class="project-thumb-caption">
-                  <a href="https://github.com/andromeda111/NocJournal" target="_blank"><img src="img/github.png" alt=""></a>
-                </div>
-              </figcaption>
-            </figure>
-            <div class="projects-card-details">
-              <h5><a href="https://github.com/andromeda111/NocJournal" target="_blank">NocJournal</a></h5>
-              <p>A dream journaling app for iOS/Android.</p>
+      <!-- HousePal -->
+      <div class="projects-card">
+        <figure class="projects-card-thumb">
+          <img class="project-img" src="img/housepal-thumb.jpg" alt="">
+          <figcaption>
+            <div class="project-thumb-caption">
+              <a href="https://github.com/andromeda111/housepal" target="_blank"><img src="img/github.png" alt=""></a>
             </div>
-        </div>
-        <!-- NeverBored -->
-        <div class="projects-card">
-          <figure class="projects-card-thumb">
-            <img class="project-img" src="img/neverbored-thumb.jpg" alt="">
-            <figcaption>
-              <div class="project-thumb-caption">
-                <a href="https://github.com/missalyss/never_bored" target="_blank"><img src="img/github.png" alt=""></a>
-              </div>
-              <div class="project-thumb-divider"></div>
-              <div class="project-thumb-caption">
-                <a href="https://never-bored.herokuapp.com/" target="_blank">View Live</a>
-              </div>
-            </figcaption>
-          </figure>
-          <div class="projects-card-details">
-            <h5><a href="https://github.com/missalyss/never_bored" target="_blank">NeverBored</a></h5>
-            <p>A social collection of user-submitted activity ideas.</p>
-          </div>
+          </figcaption>
+        </figure>
+        <div class="projects-card-details">
+          <h5><a href="https://github.com/andromeda111/housepal" target="_blank">HousePal</a></h5>
+          <p>Android app designed to make communal living easier for people with roommates.</p>
         </div>
       </div>
-      <div class="projects-footer">
-        <p>See other projects and code of mine on <a href="https://github.com/andromeda111" target="_blank">GitHub</a></p>
-        <a href="https://github.com/andromeda111" target="_blank"><img src="img/github-dark.svg" alt=""></a>
+      <!-- NocJournal -->
+      <div class="projects-card">
+        <figure class="projects-card-thumb">
+          <img class="project-img" src="img/nocjournal-thumb.jpg" alt="">
+          <figcaption>
+            <div class="project-thumb-caption">
+              <a href="https://github.com/andromeda111/NocJournal" target="_blank"><img src="img/github.png" alt=""></a>
+            </div>
+          </figcaption>
+        </figure>
+        <div class="projects-card-details">
+          <h5><a href="https://github.com/andromeda111/NocJournal" target="_blank">NocJournal</a></h5>
+          <p>A dream journaling app for iOS/Android.</p>
+        </div>
       </div>
-    </section>
+      <!-- NeverBored -->
+      <div class="projects-card">
+        <figure class="projects-card-thumb">
+          <img class="project-img" src="img/neverbored-thumb.jpg" alt="">
+          <figcaption>
+            <div class="project-thumb-caption">
+              <a href="https://github.com/missalyss/never_bored" target="_blank"><img src="img/github.png" alt=""></a>
+            </div>
+            <div class="project-thumb-divider"></div>
+            <div class="project-thumb-caption">
+              <a href="https://never-bored.herokuapp.com/" target="_blank">View Live</a>
+            </div>
+          </figcaption>
+        </figure>
+        <div class="projects-card-details">
+          <h5><a href="https://github.com/missalyss/never_bored" target="_blank">NeverBored</a></h5>
+          <p>A social collection of user-submitted activity ideas.</p>
+        </div>
+      </div>
 
-    <section id="contact" class="contact">
-      <header class="light-header">
-        <h2>Contact Me</h2>
-      </header>
-      <div class="contact-container">
-        <h3>Let's Get In Touch!</h3>
-        <div class="contact-icons-group">
-          <div class="contact-icon">
-            <p>GitHub</p>
-            <a href="https://github.com/andromeda111" target="_blank"><img src="img/github-icon.svg" alt=""></a>
-          </div>
-          <div class="contact-icon">
-            <p>LinkedIn</p>
-            <a href="https://www.linkedin.com/in/john-seymour-dev/" target="_blank"><img src="img/linkedin-icon.svg" alt=""></a>
-          </div>
-          <div class="contact-icon">
-            <p>Email</p>
-            <a href="mailto:john@johnseymourdev.com"><img src="img/mail-icon.svg" alt=""></a>
-          </div>
-        </div>
-        <p>Thanks for visiting!</p>
-      </div>
-    </section>
+    </div>
+    <div class="projects-footer">
+      <p>See other projects and code of mine on <a href="https://github.com/andromeda111" target="_blank">GitHub</a></p>
+      <a href="https://github.com/andromeda111" target="_blank"><img src="img/github-icon-dark.svg" alt=""></a>
+    </div>
 
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <header class="light-header">
+      <h2>Contact Me</h2>
+    </header>
+    <div class="contact-container">
+      <h3>Let's Get In Touch!</h3>
+      <div class="contact-icons-group">
+        <div class="contact-icon">
+          <p>GitHub</p>
+          <a href="https://github.com/andromeda111" target="_blank"><img src="img/github-icon-light.svg" alt=""></a>
+        </div>
+        <div class="contact-icon">
+          <p>LinkedIn</p>
+          <a href="https://www.linkedin.com/in/john-seymour-dev/" target="_blank"><img src="img/linkedin-icon.svg" alt=""></a>
+        </div>
+        <div class="contact-icon">
+          <p>Email</p>
+          <a href="mailto:john@johnseymourdev.com"><img src="img/mail-icon.svg" alt=""></a>
+        </div>
+      </div>
+      <p>Thanks for visiting!</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer><span>Designed and developed © John Seymour 2017</span></footer>
 
 </body>
