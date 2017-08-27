@@ -1,6 +1,7 @@
 Portfolio
 =====================
 *Site under construction - August 2017*
+
 *I am currently in progress with the code and Sass for this project*
 
 This is a personal portfolio site I have built from scratch.
