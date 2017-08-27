@@ -731,7 +731,7 @@ footer {
   /********************/
   .projects-card {
     margin: 0 1% 1rem;
-    flex: 1 1 30%;
+    flex: 0 1 30%;
   }
 
   .projects-card-thumb:hover .project-img {
