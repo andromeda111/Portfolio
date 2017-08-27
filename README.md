@@ -16,4 +16,4 @@ HTML5, CSS3, JavaScript, jQuery, Sass, Gulp, Firebase (hosting).
 ### Developed and Designed By | August 2017:
 
 John Seymour: https://github.com/andromeda111
-Email: john@johnseymourdev.com
+Email: jmseymour111@gmail.com
