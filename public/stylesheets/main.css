@@ -482,6 +482,13 @@ figcaption img:hover {
   flex-grow: 1;
   padding: 0.5rem 1rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projects-card-details-tech {
+  font-size: 0.8rem;
 }
 
 .projects-footer {
