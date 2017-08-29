@@ -3,3 +3,5 @@ firebase.json
 old
 old-new
 resources
+node_modules/
+public/
