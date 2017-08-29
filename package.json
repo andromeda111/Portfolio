@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio - John Seymour | Full-Stack Web Developer",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andromeda111/portfolio.git"
+  },
+  "keywords": [],
+  "author": "John Seymour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andromeda111/portfolio/issues"
+  },
+  "homepage": "https://github.com/andromeda111/portfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
