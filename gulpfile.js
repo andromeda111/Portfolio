@@ -72,8 +72,8 @@ gulp.task('clean:public', function() {
 });
 
 // Build Run Sequence
-gulp.task('build', function(callback) {
-  runSequence('clean:public', ['sass', 'useref', 'images', 'resources'],
+gulp.task('build', function (callback) {
+  runSequence('clean:public', 'sass', 'useref', 'images', 'resources',
     callback
   )
 });
