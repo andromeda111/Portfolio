@@ -25,10 +25,10 @@ gulp.task('serve', function() {
 
 // Sass Compiling
 gulp.task('sass', function() {
-  return gulp.src('./scss/main.scss')
+  return gulp.src('app/scss/main.scss')
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('./app/css'))
+    .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -36,9 +36,9 @@ gulp.task('sass', function() {
 
 // Watchers
 gulp.task('watch', function() {
-  gulp.watch('./scss/*.scss', ['sass']) // Watch changes to SCSS files, then reload browser
-  gulp.watch('./app/**/*.html', browserSync.reload) // Watch changes to HTML files, then reload browser
-  gulp.watch('./app/js/**/*.js', browserSync.reload) // Watch changes to JS files, then reload browser
+  gulp.watch('app/scss/*.scss', ['sass']) // Watch changes to SCSS files, then reload browser
+  gulp.watch('app/*.html', browserSync.reload) // Watch changes to HTML files, then reload browser
+  gulp.watch('app/js/**/*.js', browserSync.reload) // Watch changes to JS files, then reload browser
 });
 
 /* Build Tasks */

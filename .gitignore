@@ -1,3 +1,5 @@
 .firebaserc
 firebase.json
 resources/
+node_modules/
+public/
