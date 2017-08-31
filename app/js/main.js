@@ -1,12 +1,12 @@
 $(document).ready(function() {
   // Variables
-  let $allNavLinks = $('.nav-list-item > a'),
-      $navLink = $('.nav-list li a'),
-      $navFixed = $('.nav-fixed'),
-      $navListItem = $('.nav-list-item'),
-      $navMain = $('.nav-main'),
-      $navTitleContainer = $('.nav-title-container'),
-      $navTitle = $('.nav-title')
+  var $allNavLinks = $('.nav-list-item > a')
+  var $navLink = $('.nav-list li a')
+  var $navFixed = $('.nav-fixed')
+  var $navListItem = $('.nav-list-item')
+  var $navMain = $('.nav-main')
+  var $navTitleContainer = $('.nav-title-container')
+  var $navTitle = $('.nav-title')
 
   // Smooth Scroll
   $('nav, .arrow-button').find('a').click(function() {
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 // On Scroll event handlers
   $(window).scroll(function() {
-    let y = $(this).scrollTop()
+    var y = $(this).scrollTop()
 
     // Highlight menu item on scroll
     $allNavLinks.each(function(event) {
@@ -105,8 +105,8 @@ $(document).ready(function() {
 
   // Smooth Scroll
   function smoothScroll(thisObj) {
-    let $el = thisObj
-    id = $el.attr('href')
+    var $el = thisObj
+    var id = $el.attr('href')
 
     $('html, body').animate({
       scrollTop: $(id).offset().top - $('nav').outerHeight()
@@ -116,7 +116,7 @@ $(document).ready(function() {
   }
 
   function scrollApplyHighlight (thisObj, y) {
-    let $thisParent = thisObj.parent()
+    var $thisParent = thisObj.parent()
 
     // If Scroll has reached a page section (by #id), apply .active class to corresponding link element
     if (y >= $(thisObj.attr('href')).offset().top - 100) {
