@@ -1,113 +1,133 @@
-// Smooth Scroll
-$('nav, .arrow-button').find('a').on('click', function() {
-  var $el = $(this),
-    id = $el.attr('href');
-
-  $('html, body').animate({
-    scrollTop: $(id).offset().top - $('nav').outerHeight()
-  }, 400);
-
-  return false;
-})
-
-// Highlight menu item on scroll
 $(document).ready(function() {
+  // Variables
+  let $allNavLinks = $('.nav-list-item > a'),
+      $navLink = $('.nav-list li a'),
+      $navFixed = $('.nav-fixed'),
+      $navListItem = $('.nav-list-item'),
+      $navMain = $('.nav-main'),
+      $navTitleContainer = $('.nav-title-container'),
+      $navTitle = $('.nav-title')
 
-  $('.nav-list li a').click(function() {
-
-    $('.nav-list li a').parent().removeClass('active');
-    $(this).parent().addClass('active');
-
+  // Smooth Scroll
+  $('nav, .arrow-button').find('a').click(function() {
+    smoothScroll($(this))
+    return
   })
 
+// On Scroll event handlers
   $(window).scroll(function() {
+    let y = $(this).scrollTop()
 
-    var y = $(this).scrollTop();
+    // Highlight menu item on scroll
+    $allNavLinks.each(function(event) {
+      scrollApplyHighlight($(this), y)
+      return
+    })
 
-    $('.nav-list-item > a').each(function(event) {
-      if (y >= $($(this).attr('href')).offset().top - 100) {
-        $('.nav-list-item > a').not(this).parent().removeClass('active');
-        $(this).parent().addClass('active');
+    // HEADER / NAVBAR STYLING
+    // When Scroll is greater than 200px
+    if ($(window).scrollTop() > 200) {
+      // Small Media < 768px
+      if (window.matchMedia('(max-width: 767px)').matches) {
+
+        $navFixed.css({
+          'background': 'rgba(255, 255, 255, 0.8)'
+        })
+        $navListItem.css({
+          'color': '#000',
+          'text-shadow': 'none'
+        })
+        $navMain.removeClass("nav-center")
+        $navTitleContainer.css({
+          "opacity": "0",
+          "color": "#FFF"
+        })
       } else {
-        $(this).parent().removeClass('active');
+        // Larger media > 768px
+        $navFixed.css({
+          'background': 'rgba(255, 255, 255, 0.8)'
+        })
+        $navListItem.css({
+          'color': '#000',
+          'text-shadow': 'none'
+        })
+        $navMain.removeClass("nav-center").addClass('nav-to-right')
+        $navTitleContainer.css({
+          "opacity": "1",
+          "color": "#000"
+        })
+        $navTitle.css({
+          "display": "inherit"
+        })
       }
-    });
 
+    } else {
+      // When Scroll is less than 200px
+      // Small Media < 768px
+      if (window.matchMedia('(max-width: 767px)').matches) {
+
+        $navFixed.css({
+          'background': 'rgba(255, 255, 255, 0.0)'
+        })
+        $navListItem.css({
+          'color': '#FFF',
+          'text-shadow': '1px 1px 1px rgba(0, 0, 0, 0.8)'
+        })
+        $navMain.addClass('nav-center')
+        $navTitleContainer.css({
+          "opacity": "0",
+          "color": "#000"
+        })
+
+      } else {
+        // Larger media > 768px
+        $navFixed.css({
+          'background': 'rgba(255, 255, 255, 0.0)'
+        })
+        $navListItem.css({
+          'color': '#FFF',
+          'text-shadow': '1px 1px 1px rgba(0, 0, 0, 0.8)'
+        })
+        $navMain.removeClass('nav-to-right').addClass('nav-center')
+        $navTitleContainer.css({
+          "opacity": "0",
+          "color": "#FFF"
+        })
+        $navTitle.fadeOut(300)
+      }
+
+    }
   });
-});
 
+  //////////////
+  // Functions
+  /////////////
 
-$(window).scroll(function() {
+  // Smooth Scroll
+  function smoothScroll(thisObj) {
+    let $el = thisObj
+    id = $el.attr('href')
 
-  // HEADER / NAVBAR STYLING
-  // Scroll greater than 200
-  if ($(window).scrollTop() > 200) {
-    if (window.matchMedia('(max-width: 767px)').matches) {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - $('nav').outerHeight()
+    }, 400)
 
-      $('.nav-fixed').css({
-        'background': 'rgba(255, 255, 255, 0.8)'
-      });
-      $('.nav-list-item').css({
-        'color': '#000',
-        'text-shadow': 'none'
-      });
-      $('.nav-main').removeClass("nav-center")
-      $('.nav-title-container').css({
-        "opacity": "0",
-        "color": "#FFF"
-      })
+    return
+  }
+
+  function scrollApplyHighlight (thisObj, y) {
+    let $thisParent = thisObj.parent()
+
+    // If Scroll has reached a page section (by #id), apply .active class to corresponding link element
+    if (y >= $(thisObj.attr('href')).offset().top - 100) {
+      $allNavLinks.not(thisObj).parent().removeClass('active')
+      $thisParent.addClass('active')
     } else {
-
-      $('.nav-fixed').css({
-        'background': 'rgba(255, 255, 255, 0.8)'
-      });
-      $('.nav-list-item').css({
-        'color': '#000',
-        'text-shadow': 'none'
-      });
-      $('.nav-main').removeClass("nav-center").addClass('nav-to-right');
-      $('.nav-title-container').css({
-        "opacity": "1",
-        "color": "#000"
-      })
-      $('.nav-title').css({
-        "display": "inherit"
-      })
+      $thisParent.removeClass('active')
     }
 
-  } else {
-    // Scroll less than 200
-    if (window.matchMedia('(max-width: 767px)').matches) {
+    return
+  }
 
-      $('.nav-fixed').css({
-        'background': 'rgba(255, 255, 255, 0.0)'
-      });
-      $('.nav-list-item').css({
-        'color': '#FFF',
-        'text-shadow': '1px 1px 1px rgba(0, 0, 0, 0.8)'
-      });
-      $('.nav-main').addClass('nav-center');
-      $('.nav-title-container').css({
-        "opacity": "0",
-        "color": "#000"
-      })
-
-    } else {
-
-      $('.nav-fixed').css({
-        'background': 'rgba(255, 255, 255, 0.0)'
-      });
-      $('.nav-list-item').css({
-        'color': '#FFF',
-        'text-shadow': '1px 1px 1px rgba(0, 0, 0, 0.8)'
-      });
-      $('.nav-main').removeClass('nav-to-right').addClass('nav-center');
-      $('.nav-title-container').css({
-        "opacity": "0",
-        "color": "#FFF"
-      })
-      $('.nav-title').fadeOut(300)
-    }
-
-  };
+  // END DOCUMENT READY
 });
