@@ -103,7 +103,7 @@ $(document).ready(function() {
   // Functions
   /////////////
 
-  // Smooth Scroll
+  // smoothScroll
   function smoothScroll(thisObj) {
     var $el = thisObj
     var id = $el.attr('href')
@@ -115,6 +115,7 @@ $(document).ready(function() {
     return
   }
 
+  // scrollApplyHighlight
   function scrollApplyHighlight (thisObj, y) {
     var $thisParent = thisObj.parent()
 
@@ -129,5 +130,4 @@ $(document).ready(function() {
     return
   }
 
-  // END DOCUMENT READY
 });
