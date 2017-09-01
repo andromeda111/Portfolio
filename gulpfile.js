@@ -10,8 +10,6 @@ const imagemin = require('gulp-imagemin')
 const cache = require('gulp-cache')
 const del = require('del')
 const runSequence = require('run-sequence')
-const sourcemaps = require('gulp-sourcemaps')
-const concat = require('gulp-concat')
 
 /* Development Tasks */
 /*********************/
@@ -28,10 +26,8 @@ gulp.task('serve', function() {
 // Sass Compiling
 gulp.task('sass', function() {
   return gulp.src('app/scss/main.scss')
-    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true
@@ -48,31 +44,13 @@ gulp.task('watch', function() {
 /* Build Tasks */
 /***************/
 
-// Move HTML to Public
+// Concatenate and Minify JS and CSS Files
 gulp.task('useref', function() {
   return gulp.src('app/*.html')
     .pipe(useref())
+    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('public'))
-});
-
-// Concatenate and Minify JS
-gulp.task('scripts', function() {
-  return gulp.src('app/js/**/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(concat('main.min.js'))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('public/js'))
-});
-
-// Concatenate and Minify CSS
-gulp.task('cssnano', function() {
-  return gulp.src('app/css/**/*.css')
-    .pipe(sourcemaps.init())
-    .pipe(concat('main.min.css'))
-    .pipe(cssnano())
-    .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('public/css'))
 });
 
 // Optimize Images
@@ -95,7 +73,7 @@ gulp.task('clean:public', function() {
 
 // Build Run Sequence
 gulp.task('build', function (callback) {
-  runSequence('clean:public', 'sass', 'useref', 'scripts', 'cssnano', 'images', 'resources',
+  runSequence('clean:public', 'sass', 'useref', 'images', 'resources',
     callback
   )
 });
