@@ -1,0 +1,143 @@
+/* Rotating Circle Button */
+.arrow-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 75%;
+}
+
+.outer-circle {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 0 auto;
+  opacity: 1;
+  background-color: transparent;
+  border: 0.25rem solid rgba(100, 100, 100, 1);
+  border-right: 0 solid transparent;
+  border-left: 0 solid transparent;
+  border-radius: 6.25rem;
+  animation: rotateA 6s infinite linear;
+}
+
+.inner-circle {
+  top: -4.625rem;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  position: relative;
+  opacity: 1;
+  background-color: rgba(225, 225, 225, 0.2);
+  border: 0.125rem solid rgba(225, 225, 225, 1);
+  border-right: 0 solid transparent;
+  border-left: 0 solid transparent;
+  border-radius: 6.25rem;
+  animation: rotateB 4s infinite linear;
+}
+
+.down-arrow {
+  position: relative;
+  top: -8.75rem;
+  width: 2rem;
+  height: 2rem;
+  margin: auto;
+  opacity: 1;
+  animation: motionDown 6s infinite ease-in-out;
+}
+.down-arrow img {
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.down-arrow a {
+  margin-left: -1rem;
+}
+
+/* Button Clear (Outline) */
+.button-clear {
+  transition: 0.25s ease;
+  border: 0.125rem solid #F7776D;
+  color: #F7776D;
+  background: rgba(0, 0, 0, 0.0);
+  padding:0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: $font-weight-regular;
+  cursor: pointer;
+  &:hover {
+    transition: 0.25s ease;
+    background: #F7776D;
+    color: #fff;
+  }
+}
+
+/* Icon Buttons */
+.btn-github-sm {
+  width: 3rem;
+  margin: 0 1rem;
+  transition: 0.2s ease;
+  &:hover {
+    transition: 0.2s ease;
+    transform: scale(1.2, 1.2);
+  }
+}
+
+.contact-icon {
+  margin: 0 1rem;
+  @media only screen and (min-width: $media-break-mobile-lg) {
+    margin: 0 2rem;
+  }
+  @media only screen and (min-width: $media-break-tablet) {
+    margin: 0 4rem;
+  }
+}
+
+.contact-icon img {
+  transition: 0.2s ease;
+  width: 3rem;
+  height: 3rem;
+  @media only screen and (min-width: $media-break-tablet) {
+    width: 5rem;
+    height: 5rem;
+  }
+  &:hover {
+    transition: 0.2s ease;
+    transform: scale(1.2, 1.2);
+  }
+}
+
+/* Keyframes for rotating circle button */
+@-moz-keyframes rotateA {
+  0% { -moz-transform:rotate(0deg); opacity:0;}
+	50% { opacity:1; }
+	100% { -moz-transform:rotate(-360deg); opacity:0; }
+}
+
+@-moz-keyframes rotateB {
+  0% { -moz-transform:rotate(0deg); opacity:1;}
+	50% { opacity:0; }
+	100% { -moz-transform:rotate(360deg);  opacity:1;}
+}
+
+@-webkit-keyframes rotateA {
+  0% { -webkit-transform:rotate(0deg); opacity:0;}
+	50% { opacity:1;}
+	100% { -webkit-transform:rotate(-360deg); opacity:0; }
+}
+
+@-webkit-keyframes rotateB {
+  0% { -webkit-transform:rotate(0deg); opacity:0.4;}
+	50% { opacity:0; }
+	100% { -webkit-transform:rotate(360deg); opacity:0.4;}
+}
+
+@-moz-keyframes motionDown {
+  0% { -moz-transform:translateY(-0.2rem);  opacity:0.5;}
+	50% { -moz-transform:translateY(0.2rem);opacity:0.8; }
+	100% { -moz-transform:translateY(-0.2rem); opacity:0.5; }
+}
+
+@-webkit-keyframes motionDown {
+  0% { -webkit-transform:translateY(-0.2rem);  opacity:0.5;}
+	50% { -webkit-transform:translateY(0.2rem); opacity:0.8;}
+	100% { -webkit-transform:translateY(-0.2rem); opacity:0.5; }
+}
