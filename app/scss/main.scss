@@ -11,6 +11,7 @@ html, body {
   font-family: 'Raleway', sans-serif;
   font-size: $font-size-main;
   font-weight: $font-weight-regular;
+  color: $font-color-dark;
 }
 
 a {
@@ -26,7 +27,7 @@ ul {
 }
 
 .active {
-  color: #fff !important;
+  color: $font-color-light !important;
   background-image: linear-gradient(to top, #AAA, #666);
 }
 
@@ -34,9 +35,11 @@ ul {
   transition: all 0.5s ease-in-out;
 }
 
-.light-header {
-  color: #fff;
+.section-header {
   padding: 2rem 2rem;
+  @media only screen and (min-width: $media-break-mobile-lg) {
+    padding: 2rem 4rem;
+  }
 }
 /***********************************/
 /* Small Media - min-width: 320px */
@@ -44,29 +47,35 @@ ul {
 
 /* Header Fonts */
 /****************/
-h1 {
-  font-size: 2.25rem;
+h1,
+h2,
+h3,
+h4 {
   font-weight: $font-weight-regular;
   margin: 0;
+}
+
+h1 {
+  font-size: 2.25rem;
+  @media only screen and (min-width: $media-break-tablet) {
+    font-size: 3rem;
+  }
 }
 
 h2 {
   font-size: 2rem;
-  font-weight: $font-weight-regular;
-  margin: 0;
   padding: 0;
+  @media only screen and (min-width: $media-break-tablet) {
+    font-size: 2.5rem;
+  }
 }
 
 h3 {
   font-size: 1.5rem;
-  font-weight: $font-weight-regular;
-  margin: 0;
 }
 
 h4 {
   font-size: 1.35rem;
-  font-weight: $font-weight-regular;
-  margin: 0;
 }
 
 h5 {
@@ -88,12 +97,22 @@ h5 {
   justify-content: center;
   z-index: 1;
   background: rgba(255, 255, 255, 0.0);
+  @media only screen and (min-width: $media-break-tablet) {
+    justify-content: space-between;
+  }
 }
 
 .nav-title-container {
   max-width: 767px;
   opacity: 0;
   display: none;
+  @media only screen and (min-width: $media-break-tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto 20px;
+  }
 }
 
 .nav-title {
@@ -126,8 +145,29 @@ h5 {
   padding: 0 0.25rem 0 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
-  color: #FFF;
+  color: $font-color-light;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  @media only screen and (min-width: $media-break-tablet) {
+    font-size: 1rem;
+    margin: auto 1.25rem;
+    letter-spacing: 0.25rem;
+  }
+}
+
+@media only screen and (min-width: $media-break-tablet) {
+  .nav-main {
+    position: fixed;
+  }
+
+  .nav-to-right {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+
+  .nav-center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* Header Section */
@@ -136,6 +176,7 @@ h5 {
   width: 100%;
   height: 100vh;
   position: relative;
+  color: $font-color-light;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -150,7 +191,6 @@ h5 {
 }
 
 .header-content {
-  color: #fff;
   text-align: center;
   margin: auto;
 }
@@ -159,6 +199,10 @@ h5 {
   width: 14rem;
   margin: 1rem auto;
   border-bottom: 0.08rem solid white;
+  @media only screen and (min-width: $media-break-tablet) {
+    width: 18rem;
+    border-bottom: 0.08rem solid #fff;
+  }
 }
 
 .icon {
@@ -166,11 +210,15 @@ h5 {
   mix-blend-mode: screen;
   height: 2rem;
   padding: 0 0.5rem;
+  @media only screen and (min-width: $media-break-tablet) {
+    height: 3rem;
+  }
 }
 
 /* About Section */
 /*****************/
 .about {
+  color: $font-color-light;
   background-image: linear-gradient(to top, rgba(54,105,158,0.6) 0%,rgba(20,50,81,0.6) 100%), url("../img/about-bg.jpg");
   padding: 0 2%;
   padding-bottom: 2rem;
@@ -181,26 +229,39 @@ h5 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media only screen and (min-width: $media-break-tablet) {
+    max-width: 1200px;
+    padding: 0 4rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .about-portrait {
   width: 10rem;
+  @media only screen and (min-width: $media-break-tablet) {
+    width: 12rem;
+  }
 }
 
 .about-description {
-  flex: 1;
-  font-size: 1rem;
-  color: white;
   margin: 0.25rem 1rem;
+  font-size: 1rem;
+  font-weight: $font-weight-thin;
   letter-spacing: 0.05rem;
-}
-
-.about-description p:first-child {
-  margin-top: 0;
-}
-
-.about-description a {
-  margin-top: 1rem;
+  flex: 1;
+  p:first-child {
+    margin-top: 0;
+  }
+  a {
+    margin-top: 1rem;
+  }
+  @media only screen and (min-width: $media-break-tablet) {
+    margin-left: 2rem;
+  }
 }
 
 .resume {
@@ -210,7 +271,6 @@ h5 {
 .skills {
   font-size: 0.875rem;
   text-align: center;
-  color: #fff;
   font-weight: $font-weight-thin;
   line-height: 1.25rem;
   margin: 1rem;
@@ -218,19 +278,34 @@ h5 {
   flex-wrap: wrap;
   justify-content: space-between;
   flex: 1 1 100%;
-}
-
-.skills h4 {
-  width: 100%;
-}
-
-.skills ul {
-  flex: 1 1 50%;
-}
-
-.skills li:first-child {
-  font-weight: $font-weight-heavy;
-  margin-bottom: 0.5rem;
+  h4 {
+    width: 100%;
+  }
+  ul {
+    flex: 1 1 50%;
+    @media only screen and (min-width: $media-break-mobile-lg) {
+      flex: 1 30%;
+    }
+    @media only screen and (min-width: $media-break-desktop) {
+        flex: 1 15%;
+        &:nth-child(6) {
+          padding-right: 0.75rem;
+        }
+    }
+  }
+  li:first-child {
+    font-weight: $font-weight-heavy;
+    margin-bottom: 0.5rem;
+  }
+  @media only screen and (min-width: $media-break-tablet) {
+    max-width: 75rem;
+    margin: 1rem auto;
+    min-width: 37.5rem;
+    width: 75%;
+  }
+  @media only screen and (min-width: $media-break-desktop) {
+    width: 100%;
+  }
 }
 
 .skills-growing {
@@ -244,6 +319,7 @@ h5 {
   position: relative;
   padding: 0 2%;
   padding-bottom: 6rem;
+  color: $font-color-dark;
   background-color: #fff;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%,rgba(255,255,255,0.8) 100%), url('../img/sea-bg2.jpg');
   background-size: cover;
@@ -253,15 +329,16 @@ h5 {
   isolation: isolate;
 }
 
-.projects-header {
-  color: #000;
+.section-header-projects {
   padding: 2rem;
-}
-
-.projects-header p {
-  margin-top: 2rem;
-  font-size: 1.1rem;
-  text-align: center;
+  p {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  @media only screen and (min-width: $media-break-mobile-lg) {
+    padding: 2rem 4rem;
+  }
 }
 
 .projects-container {
@@ -281,6 +358,15 @@ h5 {
   flex-direction: column;
   background: #fff;
   box-shadow: 1px 2px 3px #888;
+  @media only screen and (min-width: $media-break-mobile-lg) {
+    margin: 0 2% 1rem;
+    flex: 1 1 40%;
+    max-width: 48%;
+  }
+  @media only screen and (min-width: $media-break-tablet) {
+    margin: 0 1% 1rem;
+    flex: 0 1 30%;
+  }
 }
 
 .projects-card-thumb {
@@ -290,6 +376,21 @@ h5 {
 	display: block;
 	overflow: hidden;
   cursor: pointer;
+  &:hover {
+    figcaption {
+    	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    	filter: alpha(opacity=100);
+    	opacity: 1;
+    	top: 0;
+    }
+    .project-img {
+    	transform: scale(1.1);
+      @media only screen and (min-width: $media-break-tablet) {
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+      }
+    }
+  }
 }
 
 .project-img {
@@ -300,29 +401,30 @@ h5 {
   transition: all 0.3s;
 }
 
-.projects-card-thumb:hover figcaption {
-	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-	filter: alpha(opacity=100);
-	opacity: 1;
-	top: 0;
-}
-
 figcaption {
   position: absolute;
   font-size: 1.2rem;
   height: 100%;
   width: 100%;
-  color: #fff;
+  color: $font-color-light;
   opacity: 0;
   display: flex;
-  background: rgba(0,0,0,.75);
+  background: rgba(0,0,0,.7);
 	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 	filter: alpha(opacity=0);
   transition: all 0.6s ease;
-}
-
-.projects-card-thumb:hover .project-img {
-	transform: scale(1.1);
+  a {
+    transition: 0.2s ease;
+    &:hover {
+    	font-size: 1.4rem;
+    }
+  }
+  img {
+    transition: 0.2s ease;
+    &:hover {
+      transform: scale(1.15, 1.15);
+    }
+  }
 }
 
 .project-thumb-caption {
@@ -339,22 +441,6 @@ figcaption {
   top:10%;
   bottom:10%;
   border-left:1px solid white;
-}
-
-figcaption a {
-  transition: 0.2s ease;
-}
-
-figcaption a:hover {
-	font-size: 1.4rem;
-}
-
-figcaption img {
-  transition: 0.2s ease;
-}
-
-figcaption img:hover {
-  transform: scale(1.15, 1.15);
 }
 
 .projects-card-details {
@@ -378,15 +464,16 @@ figcaption img:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.projects-footer a {
-  color: #F7776D;
-  font-weight: $font-weight-heavy;
-}
-
-.projects-footer a:hover {
-  color: #000;
+  a {
+    color: $color-link;
+    font-weight: $font-weight-heavy;
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+  @media only screen and (min-width: $media-break-mobile-lg) {
+    flex-direction: row;
+  }
 }
 
 /* Contact Section */
@@ -395,6 +482,7 @@ figcaption img:hover {
   padding: 0 2%;
   min-height: calc(100vh - 98px);
   padding-bottom: 3rem;
+  color: $font-color-light;
   background-color: #333;
   background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.8) 0%,rgba(25,25,25,0.8) 100%), url('../img/sea-bg1.jpg');
   background-size: cover;
@@ -405,7 +493,6 @@ figcaption img:hover {
 
 .contact-container {
   margin: auto;
-  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -418,180 +505,19 @@ figcaption img:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media only screen and (min-width: $media-break-tablet) {
+    margin: 4rem 0;
+    max-width: 50%;
+  }
 }
 
 /* Footer Section */
 /********************/
-
 footer {
   height: 3rem;
   width: 100%;
   margin-top: -3rem;
   font-size: 0.8rem;
-  color: #fff;
   text-align: center;
-}
-
-/* MEDIA */
-/*  480px breakpoint - Mobile Landscape */
-@media only screen and (min-width: 30em) {
-
-  .light-header {
-    padding: 2rem 4rem;
-  }
-
-  .skills ul {
-    flex: 1 30%;
-  }
-
-  .projects-header {
-    padding: 2rem 4rem;
-  }
-
-  .projects-card {
-    margin: 0 2% 1rem;
-    flex: 1 1 40%;
-    max-width: 48%;
-  }
-
-  .projects-footer {
-    flex-direction: row;
-  }
-
-}
-
-/*  768px breakpoint - Tablet */
-@media only screen and (min-width: 48em) {
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  h3 {
-    font-weight: $font-weight-regular;
-  }
-
-/* Navigation */
-/**************/
-
-  .nav-fixed {
-    justify-content: space-between;
-  }
-
-  .nav-title-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: auto 20px;
-  }
-
-  .nav-main {
-    position: fixed;
-  }
-
-  .nav-to-right {
-    left: 100%;
-    transform: translateX(-100%);
-  }
-
-  .nav-center {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .nav-list-item {
-    font-size: 1rem;
-    margin: auto 1.25rem;
-    letter-spacing: 0.25rem;
-  }
-
-  /* Header Section */
-  /******************/
-
-  .header-linebreak {
-    width: 18rem;
-    border-bottom: 0.08rem solid #fff;
-  }
-
-  .icon {
-    height: 3rem;
-  }
-
-  /* About Section */
-  /*****************/
-
-  .about-intro {
-    max-width: 1200px;
-    padding: 0 4rem;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .about-portrait {
-    width: 12rem;
-  }
-
-  .about-description {
-    color: #fff;
-    letter-spacing: 0.05rem;
-    margin-left: 2rem;
-  }
-
-  .skills {
-    max-width: 75rem;
-    color: #fff;
-    margin: 1rem auto;
-    text-align: center;
-    min-width: 37.5rem;
-    width: 75%;
-  }
-
-  /* Projects Section */
-  /********************/
-  .projects-card {
-    margin: 0 1% 1rem;
-    flex: 0 1 30%;
-  }
-
-  .projects-card-thumb:hover .project-img {
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
-  }
-
-  figcaption {
-    background: rgba(0,0,0,.6);
-  }
-
-  /* Contact Section */
-  /********************/
-
-  .contact-icons-group {
-    margin: 4rem 0;
-    max-width: 50%;
-  }
-
-}
-
-/*  1024px breakpoint - Desktop */
-@media only screen and (min-width: 64em) {
-
-  .skills {
-    width: 100%;
-  }
-
-  .skills ul {
-    flex: 1 15%;
-  }
-
-  .skills ul:nth-child(6) {
-    padding-right: 0.75rem;
-  }
+  color: $font-color-light;
 }
